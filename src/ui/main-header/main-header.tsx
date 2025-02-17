@@ -4,9 +4,11 @@ import { usePathname } from 'next/navigation';
 import React from 'react';
 
 import '../../../styles/global.scss';
+import './main-header.scss';
 
 export default function MainHeader() {
     const pathname: string = usePathname();
+
     const headers: string[] = [
         "header_v4.jpg",
         "header_2.jpg",
@@ -66,6 +68,10 @@ export default function MainHeader() {
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div className="notice">
+                    I just finished reviving my website from an old archive. This is a version from 2017 which still doesn't have its original contents.<br />
+                    I'm currently building it back up to its full glory.
                 </div>
             </header>
         </React.Fragment>

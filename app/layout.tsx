@@ -7,7 +7,7 @@ export const metadata: Metadata = {
         template: '%s | Alex',
         default: 'Alex',
     },
-    description: 'Alex\'s Homebase',
+    description: 'Alex\'s Research Lab',
 };
 
 export default function RootLayout({
@@ -15,12 +15,10 @@ export default function RootLayout({
 }: {
     children: React.ReactNode
 }) {
-
-
     return (
         <html lang="en">
             <body>
-                <MainHeader/>
+                <MainHeader />
                 {children}
             </body>
         </html >
