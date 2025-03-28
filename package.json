@@ -1,20 +1,28 @@
 {
+  "name": "alex-lab",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^14.2.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.7.4",
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "20.14.6",
-    "@types/react": "18.3.3",
-    "sass": "^1.77.6",
-    "typescript": "5.4.5"
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "sass": "^1.86.0",
+    "typescript": "^5"
   }
 }

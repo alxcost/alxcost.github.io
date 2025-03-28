@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
-import MainHeader from '../src/ui/main-header/main-header';
+import MainHeader from '@/pages/main-header/main-header';
+import "@/styles/global.scss";
 
 export const metadata: Metadata = {
     title: {

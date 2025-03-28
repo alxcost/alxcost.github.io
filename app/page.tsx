@@ -1,4 +1,4 @@
-import Homepage from "../src/ui/homepage/homepage";
+import Homepage from "@/pages/homepage/homepage";
 
 export default function Page() {
     return <Homepage></Homepage>

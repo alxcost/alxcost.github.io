@@ -3,11 +3,10 @@
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-import '../../../styles/global.scss';
 import './main-header.scss';
 
 export default function MainHeader() {
-    const pathname: string = usePathname();
+    const pathname: string | null = usePathname();
 
     const headers: string[] = [
         "header_v4.jpg",
@@ -19,7 +18,8 @@ export default function MainHeader() {
         "header_9.jpg"
     ];
 
-    const selectedHeader = headers[Math.floor(Math.random() * headers.length)];
+    //const selectedHeader = headers[Math.floor(Math.random() * headers.length)];
+    const selectedHeader = headers[1];
 
     return (
         <React.Fragment>
