@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './main-header.scss';
 
@@ -18,16 +18,22 @@ export default function MainHeader() {
         "header_9.jpg"
     ];
 
+    const [selectedHeader, setSelectedHeader] = useState('');
+
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * headers.length);
+        setSelectedHeader(headers[randomIndex]);
+    })
+
     //const selectedHeader = headers[Math.floor(Math.random() * headers.length)];
-    const selectedHeader = headers[1];
 
     return (
         <React.Fragment>
             <header>
-                <div id="header-container">
+                <div id="header-container" suppressHydrationWarning>
                     <div className={"header-logo " + (pathname === '/' ? 'header-logo-extended' : '')}
                         style={{
-                            backgroundImage: 'url("/images/headers/' + selectedHeader + '")'
+                            backgroundImage: `url("/images/headers/${selectedHeader}")`
                         }}>
                         <div id="header-title">
                             <div className="contents">
