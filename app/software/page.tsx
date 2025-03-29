@@ -1,7 +1,7 @@
-import Software from "../../src/ui/software/software";
+import Software from "@/pages/software/software";
 
 export default function Page() {
     return (
-        <Software/>
+        <Software />
     )
 }

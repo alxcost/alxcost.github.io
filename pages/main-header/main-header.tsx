@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import './main-header.scss';
 
@@ -18,22 +18,22 @@ export default function MainHeader() {
         "header_9.jpg"
     ];
 
-    const [selectedHeader, setSelectedHeader] = useState('');
+    /*const [selectedHeader, setSelectedHeader] = useState('');
 
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * headers.length);
         setSelectedHeader(headers[randomIndex]);
-    })
+    });*/
 
-    //const selectedHeader = headers[Math.floor(Math.random() * headers.length)];
+    const selectedHeader = headers[Math.floor(Math.random() * headers.length)];
 
     return (
         <React.Fragment>
             <header>
-                <div id="header-container" suppressHydrationWarning>
-                    <div className={"header-logo " + (pathname === '/' ? 'header-logo-extended' : '')}
+                <div id="header-container">
+                    <div suppressHydrationWarning className={"header-logo " + (pathname === '/' ? 'header-logo-extended' : '')}
                         style={{
-                            backgroundImage: `url("/images/headers/${selectedHeader}")`
+                            backgroundImage: 'url("/images/headers/' + selectedHeader + '")'
                         }}>
                         <div id="header-title">
                             <div className="contents">
@@ -53,6 +53,12 @@ export default function MainHeader() {
                             <a href="/">
                                 <h2>Home</h2>
                                 <p>Welcome</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/portfolio">
+                                <h2>Portfolio</h2>
+                                <p>My contributions</p>
                             </a>
                         </li>
                         <li>

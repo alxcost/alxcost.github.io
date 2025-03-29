@@ -1,9 +1,9 @@
 export default function Electronics() {
-    return(
+    return (
         <div className="content-container">
             <section id="description">
                 <div className="text">
-                    Some experiences I've had with equipments and other hardware projects.
+                    Experiences with equipments and other hardware projects.
                 </div>
             </section>
 

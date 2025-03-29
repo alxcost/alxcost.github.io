@@ -1,7 +1,7 @@
 
 
 
-import { getArticleContent, getAvailableArticles } from '@/utils/getAvailableArticles';
+import { getArticleContent, getAvailableArticles } from '@/utils/articleServices';
 import Markdown from "markdown-to-jsx";
 
 export const dynamicParams = false;

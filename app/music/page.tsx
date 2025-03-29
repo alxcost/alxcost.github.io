@@ -1,4 +1,4 @@
-import Music from "../../src/ui/music/music";
+import Music from "@/pages/music/music";
 
 export default function Page() {
     return (
