@@ -1,7 +1,7 @@
 
 
 
-import { getArticleContent, getAvailableArticles } from '@/utils/articleServices';
+import { ArticleSlug, getArticleContent, getAvailableArticles } from '@/utils/articleServices';
 import Markdown from "markdown-to-jsx";
 
 export const dynamicParams = false;
@@ -12,19 +12,13 @@ export async function generateStaticParams() {
     const posts = getAvailableArticles(articlesDir);
     const postMap = posts.map((post) => ({ slug: post.slug }));
 
-    console.log(postMap)
-
     return postMap;
 }
 
-export default async function Page({ params }: { params: any }) {
+export default async function Page({ params }: { params: ArticleSlug }) {
     params = await params;
 
     const articleContent = getArticleContent(articlesDir, params.slug)
-
-    console.log(articleContent);
-
-
 
     return (
         <div>
