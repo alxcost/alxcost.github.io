@@ -2,10 +2,34 @@
 
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function SimpleGallery({ galleryId, images }: { galleryId: string, images: any }) {
+export type ImageSource = {
+    url: string,
+    thumbUrl: string,
+    width: string,
+    height: string
+}
+
+let instanceCounter: number = 0;
+
+export default function PhotoswipeGallery({ images }: { images: string }) {
+    const [loadedImages, setLoadedImages] = useState<ImageSource[]>([]);
+
+    const galleryId: string = "pswp-gallery" + instanceCounter;
+
     useEffect(() => {
+        instanceCounter++;
+    });
+
+    useEffect(() => {
+        let imageJson = images
+            .replace(/'/g, '"')         // Replace single with double quotes
+            .replace(/\s+/g, '')        // Remove spaces
+            .replace(/,\]/g, ']');      // Remove trailing commas if any
+
+        setLoadedImages(JSON.parse(imageJson));
+
         let lightbox = new PhotoSwipeLightbox({
             gallery: '#' + galleryId,
             children: 'a',
@@ -17,28 +41,22 @@ export default function SimpleGallery({ galleryId, images }: { galleryId: string
         return () => {
             lightbox.destroy();
         };
-    }, []);
+    }, [images]);
 
-    images = images
-        .replace(/'/g, '"')         // Replace single with double quotes
-        .replace(/\s+/g, '')        // Remove spaces
-        .replace(/,\]/g, ']');      // Remove trailing commas if any
-
-    images = JSON.parse(images);
 
     return (
         <div className="pswp-gallery" id={galleryId}>
             {
-                images.map((image: any, index: number) => (
+                loadedImages.map((image: any, index: number) => (
                     <a
-                        href={image.largeURL}
+                        href={image.url}
                         data-pswp-width={image.width}
                         data-pswp-height={image.height}
                         key={galleryId + '-' + index}
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <img src={image.thumbnailURL} alt="" />
+                        <img src={image.thumb} alt="" />
                     </a>
                 ))
             }

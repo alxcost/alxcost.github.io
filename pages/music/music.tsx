@@ -1,7 +1,7 @@
 export default function Music() {
-    return(
+    return (
         <div className="content-container">
-            <section id="content">
+            <section className="articles">
                 <h2>
                     Music
                 </h2>

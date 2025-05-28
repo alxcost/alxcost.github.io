@@ -9,7 +9,7 @@ export default function Homepage() {
     return (
         <React.Fragment>
             <div className="content-container">
-                <section id="description">
+                <section className="description">
                     <div className="title">
                         Welcome to Alex&apos;s Research Lab
                     </div>
@@ -18,7 +18,7 @@ export default function Homepage() {
                     </div>
                 </section>
 
-                <section id="content">
+                <section className="articles">
                     <h2>Who Am I?</h2>
 
                     <div className="whoami-logo">
