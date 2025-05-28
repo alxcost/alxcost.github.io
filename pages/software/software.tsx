@@ -1,13 +1,13 @@
 export default function Software() {
     return (
         <div className="content-container">
-            <section id="description">
+            <section className="description">
                 <div className="text">
-                    Some software and tools I've released to the public. Open-source projects are available on my <a href="https://github.com/alxcost" target="_blank"><img className="file-type-2x" src="ui/images/icons/GitHub_Logo.png" /></a>.
+                    Software and tools I&apos;ve released to the public. Open-source projects are available on my <a href="https://github.com/alxcost" target="_blank"><img className="file-type-2x" src="ui/images/icons/GitHub_Logo.png" /></a>.
                 </div>
             </section>
 
-            <section id="content">
+            <section className="articles">
                 <h2>Articles</h2>
                 <ul className="post-list">
                     <li><a href="software/sensorthings">The OGC SensorThings Standard</a> - 2017-06</li>
@@ -16,7 +16,7 @@ export default function Software() {
 
                 <h2>Tools</h2>
                 <ul className="post-list">
-                    <li><a href="https://github.com/alxcost/tmbox-downloader" target="_blank">tmbox.net Downloader</a>,  Simple tmbox downloader/web-crawler to bulk download a user's songs from tmbox.net </li>
+                    <li><a href="https://github.com/alxcost/tmbox-downloader" target="_blank">tmbox.net Downloader</a>,  Simple tmbox downloader/web-crawler to bulk download a user&apos;s songs from tmbox.net </li>
                     <li><a href="https://github.com/alxcost/SerialPortReader" target="_blank">Serial Port Reader</a>, Basic Serial COM port reader</li>
                 </ul>
 

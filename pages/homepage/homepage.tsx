@@ -9,20 +9,20 @@ export default function Homepage() {
     return (
         <React.Fragment>
             <div className="content-container">
-                <section id="description">
+                <section className="description">
                     <div className="title">
-                        Welcome to Alex's Research Lab
+                        Welcome to Alex&apos;s Research Lab
                     </div>
                     <div className="text">
                         <p>Came to hear the ramblings and experiments of an engineer full of ideas but little time to put them into practice? Step right in.</p>
                     </div>
                 </section>
 
-                <section id="content">
+                <section className="articles">
                     <h2>Who Am I?</h2>
 
                     <div className="whoami-logo">
-                        <img src="images/logo_agrippa.png"/>
+                        <img src="images/logo_agrippa.png" />
                     </div>
 
                     <div className="whoami-text">
@@ -37,28 +37,28 @@ export default function Homepage() {
                         <span>
                             <a className="tile" href="software/sensorthings">
                                 <div>
-                                    <img src="images/tiles/st_small_tile.png"/>
+                                    <img src="images/tiles/st_small_tile.png" />
                                 </div>
                             </a>
                         </span>
                         <span>
                             <a className="tile" href="music">
                                 <div>
-                                    <img src="images/tiles/music_small_tile.png"/>
+                                    <img src="images/tiles/music_small_tile.png" />
                                 </div>
                             </a>
                         </span>
                         <span>
                             <a className="tile" href="/electronics/spooky">
                                 <div>
-                                    <img src="images/tiles/gore_small_tile.png"/>
+                                    <img src="images/tiles/gore_small_tile.png" />
                                 </div>
                             </a>
                         </span>
                         <span>
                             <a className="tile" href="/electronics/type2420">
                                 <div>
-                                    <img src="images/tiles/radio_small_tile.png"/>
+                                    <img src="images/tiles/radio_small_tile.png" />
                                 </div>
                             </a>
                         </span>
@@ -67,7 +67,7 @@ export default function Homepage() {
 
 
                 <button type="button" className="btn btn-default btn-xs" id="change-log-btn" onClick={() => setShowChangelog(!showChangelog)}>Change Log</button>
-                { showChangelog && <Changelog></Changelog> }
+                {showChangelog && <Changelog></Changelog>}
             </div>
         </React.Fragment>
     )

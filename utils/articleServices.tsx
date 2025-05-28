@@ -2,10 +2,13 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
+export type ArticleSlug = {
+    slug: string;
+}
 
 // Reads from directory of articles and returns a list of Markdown file that are present
 // Used to dynamically generate article endpoints
-export function getAvailableArticles(basePath: string) {
+export function getAvailableArticles(basePath: string): ArticleSlug[] {
     const folder = basePath + '/'
     const files = fs.readdirSync(folder)
 
@@ -20,7 +23,7 @@ export function getAvailableArticles(basePath: string) {
         }
     })
 
-    return articles
+    return articles;
 }
 
 export function getArticleContent(articleDir: string, slug: string) {

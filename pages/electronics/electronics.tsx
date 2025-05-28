@@ -1,13 +1,13 @@
 export default function Electronics() {
     return (
-        <div className="content-container">
-            <section id="description">
+        <div className="content-container articles-description">
+            <section className="description">
                 <div className="text">
                     Experiences with equipments and other hardware projects.
                 </div>
             </section>
 
-            <section id="content">
+            <section className="articles">
                 <h2>Electronics &amp; Computers</h2>
                 <ul className="post-list">
                     <li><a href="electronics/spooky">Technological Horrors</a></li>
