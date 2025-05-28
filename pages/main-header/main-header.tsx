@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
+import Link from 'next/link';
 import './main-header.scss';
 
 export default function MainHeader() {
@@ -39,7 +40,7 @@ export default function MainHeader() {
                             <div className="contents">
                                 <div className="bracket">&#123;</div>
                                 <div className="titles">
-                                    <div className="title">Alex's Experiments</div>
+                                    <div className="title">Alex&apos;s Experiments</div>
                                     <div className="title-jp">アレックスの研究</div>
                                 </div>
                                 <div className="bracket">&#125;</div>
@@ -50,40 +51,40 @@ export default function MainHeader() {
                 <div id="navigation-container">
                     <ul className="navigation">
                         <li>
-                            <a href="/">
+                            <Link href="/">
                                 <h2>Home</h2>
                                 <p>Welcome</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/portfolio">
+                            <Link href="/portfolio">
                                 <h2>Portfolio</h2>
                                 <p>My contributions</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/electronics">
+                            <Link href="/electronics">
                                 <h2>Electronics</h2>
                                 <p>Hardware adventures</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/music">
+                            <Link href="/music">
                                 <h2>Music</h2>
                                 <p>Musical compositions</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/software">
+                            <Link href="/software">
                                 <h2>Software</h2>
                                 <p>Programs and Tools</p>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
                 <div className="notice">
-                    I just finished reviving my website from an old archive. This is a version from 2017 which still doesn't have its original contents.<br />
-                    I'm currently building it back up to its full glory.
+                    I just finished reviving my website from an old archive. This is a version from 2017 which still doesn&apos;t have its original contents.<br />
+                    I&apos;m currently building it back up to its full glory.
                 </div>
             </header>
         </React.Fragment>
