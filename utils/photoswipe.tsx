@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import { useEffect, useState } from 'react';
@@ -48,7 +49,7 @@ export default function PhotoswipeGallery({ images }: { images: string }) {
         <div className="pswp-gallery" id={galleryId}>
             {
                 loadedImages.map((image: any, index: number) => (
-                    <a
+                    <Link
                         href={image.url}
                         data-pswp-width={image.width}
                         data-pswp-height={image.height}
@@ -57,7 +58,7 @@ export default function PhotoswipeGallery({ images }: { images: string }) {
                         rel="noreferrer"
                     >
                         <img src={image.thumb} alt="" />
-                    </a>
+                    </Link>
                 ))
             }
         </div>

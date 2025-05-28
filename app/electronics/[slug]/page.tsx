@@ -6,19 +6,17 @@ export const dynamicParams = false;
 
 const articlesDir = 'pages/electronics';
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<ArticleSlug[]> {
     const posts = getAvailableArticles(articlesDir);
     const postMap = posts.map((post) => ({ slug: post.slug }));
 
     return postMap;
 }
 
-export default async function Page({ params }: { params: ArticleSlug }) {
-    params = await params;
+export default async function Page(props: { params: Promise<ArticleSlug> }) {
+    const params = await props.params;
 
     const articleContent = getArticleContent(articlesDir, params.slug)
-
-    console.log(articleContent)
 
     return (
         <div className="article">

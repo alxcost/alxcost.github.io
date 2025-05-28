@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Electronics() {
     return (
         <div className="content-container articles-description">
@@ -10,9 +12,9 @@ export default function Electronics() {
             <section className="articles">
                 <h2>Electronics &amp; Computers</h2>
                 <ul className="post-list">
-                    <li><a href="electronics/spooky">Technological Horrors</a></li>
-                    <li><a href="electronics/type2420">Grundig Type 2420 Radio</a>, Mains Hum, Broken filter capacitor</li>
-                    <li><a href="electronics/pm3230">Philips PM3230 Oscilloscope</a>, No CRT output, and astigmatism malfunction</li>
+                    <li><Link href="electronics/spooky">Technological Horrors</Link></li>
+                    <li><Link href="electronics/type2420">Grundig Type 2420 Radio</Link>, Mains Hum, Broken filter capacitor</li>
+                    <li><Link href="electronics/pm3230">Philips PM3230 Oscilloscope</Link>, No CRT output, and astigmatism malfunction</li>
                 </ul>
             </section>
         </div>

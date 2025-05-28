@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Changelog() {
@@ -21,7 +22,7 @@ export default function Changelog() {
                             <td>24/09/2016</td>
                             <td>
                                 <ul className="no-bullet">
-                                    <li><p>Added <a href="type2420.php">Grundig Type 2420</a>, <a href="about.php">contact information</a></p></li>
+                                    <li><p>Added <Link href="type2420.php">Grundig Type 2420</Link>, <Link href="about.php">contact information</Link></p></li>
                                     <li><p>Vastly improved website responsiveness</p></li>
                                 </ul>
                             </td>
@@ -31,7 +32,7 @@ export default function Changelog() {
                             <td>31/10/2015</td>
                             <td>
                                 <ul className="no-bullet">
-                                    <li><a href="music">Added new music section</a></li>
+                                    <li><Link href="music">Added new music section</Link></li>
                                 </ul>
                             </td>
                         </tr>
@@ -76,7 +77,7 @@ export default function Changelog() {
                             <td>12/09/2012</td>
                             <td>
                                 <ul className="no-bullet">
-                                    <li><p>New Project: <a href="asteroids.html">Asteroids</a></p></li>
+                                    <li><p>New Project: <Link href="asteroids.html">Asteroids</Link></p></li>
                                 </ul>
                             </td>
                         </tr>
@@ -94,7 +95,7 @@ export default function Changelog() {
                             <td>10/09/2012</td>
                             <td>
                                 <ul className="no-bullet">
-                                    <li><p>Hosting website on <a href="https://www.dropbox.com">Dropbox</a></p></li>
+                                    <li><p>Hosting website on <Link href="https://www.dropbox.com">Dropbox</Link></p></li>
                                 </ul>
                             </td>
                         </tr>
@@ -104,7 +105,7 @@ export default function Changelog() {
                 <button type="button" className="btn btn-default btn-xs" id="easter-egg-btn" onClick={() => setShowEasterEgg(!showEasterEgg)}>Easter Egg?</button>
             </div>
 
-            { showEasterEgg && <EasterEgg></EasterEgg> }
+            {showEasterEgg && <EasterEgg></EasterEgg>}
         </React.Fragment>
     )
 }
@@ -112,7 +113,7 @@ export default function Changelog() {
 function EasterEgg() {
     return (
         <div id="easter-egg-container">
-		<div className="sjis">{`
+            <div className="sjis">{`
 　　　　　　 　　／￣￣￣フ＼　　 　　　　　　　　　　　　＿　　　　　　　ﾉ＾)
 　　　　　　　／／￣フ ／　　 ＼　　　　　　　　　　　 .／／＼　 　　　./　/
 　　　　　 ／／　 ∠／　 ＿＿＿＼＿＿＿　 ＿＿／／　　　＼　　 /　（＿＿＿
@@ -128,7 +129,7 @@ function EasterEgg() {
 　／∠＿／／.／∠／／／∠／／　.＼＼　　　　　　　\`ﾘﾉ ヽ　|＼　　ヽ
 ∠＿__＿／.∠＿＿／∠＿＿／∠フ＼.＼＼　　　　　 ｃ;_,;....ﾉ　ヾﾉヽ__ﾉ
         `}</div>
-		<div className="sjis">{`
+            <div className="sjis">{`
  　　　　　　　　　______　　　　　 　／´:::::ヽ､_
 　　　　　　　　「:::::::::::｀ヽ､　 __／::::____:::::::::::｀7
 　　　　　　　　＞,.'-‐'''""￣　　￣｀"''‐､:::::::/
@@ -149,6 +150,6 @@ function EasterEgg() {
 　　　　　　　　　　　.＼/:::::::;::::::::;:::::::::::/　　r'､___
 　　　　　　　　　　　 (/::::::/:::::i::::::::::::::::ゝ､____ﾉ､／
         `}</div>
-	</div>
+        </div>
     )
 }

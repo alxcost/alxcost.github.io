@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import React from "react";
 import Changelog from "./changelog";
 
@@ -26,7 +27,7 @@ export default function Homepage() {
                     </div>
 
                     <div className="whoami-text">
-                        I am Alex, a biomedical engineer who works mainly as a researcher. I love messing with electronics, programming and music. I seriously don't know what else to expose about myself in this section, so I'll leave it here for now.
+                        I am Alex, a biomedical engineer who works mainly as a researcher. I love messing with electronics, programming and music. I seriously don&apos;t know what else to expose about myself in this section, so I&apos;ll leave it here for now.
                     </div>
 
 
@@ -35,32 +36,32 @@ export default function Homepage() {
                     <h2>Latest Activity</h2>
                     <div className="tiles-container">
                         <span>
-                            <a className="tile" href="software/sensorthings">
+                            <Link className="tile" href="software/sensorthings">
                                 <div>
                                     <img src="images/tiles/st_small_tile.png" />
                                 </div>
-                            </a>
+                            </Link>
                         </span>
                         <span>
-                            <a className="tile" href="music">
+                            <Link className="tile" href="music">
                                 <div>
                                     <img src="images/tiles/music_small_tile.png" />
                                 </div>
-                            </a>
+                            </Link>
                         </span>
                         <span>
-                            <a className="tile" href="/electronics/spooky">
+                            <Link className="tile" href="/electronics/spooky">
                                 <div>
                                     <img src="images/tiles/gore_small_tile.png" />
                                 </div>
-                            </a>
+                            </Link>
                         </span>
                         <span>
-                            <a className="tile" href="/electronics/type2420">
+                            <Link className="tile" href="/electronics/type2420">
                                 <div>
                                     <img src="images/tiles/radio_small_tile.png" />
                                 </div>
-                            </a>
+                            </Link>
                         </span>
                     </div>
                 </section>
