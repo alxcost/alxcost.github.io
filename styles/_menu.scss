@@ -71,6 +71,16 @@ header {
     }
 }
 
+@keyframes blinker {
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width : 2000px) {
     .header-logo {
         background-size: cover;
@@ -102,16 +112,6 @@ header {
     .header-logo-extended {
         height: 220px;
         max-height: 220px;
-    }
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 

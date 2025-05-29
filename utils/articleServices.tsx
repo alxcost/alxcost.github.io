@@ -44,7 +44,7 @@ export async function outputArticle(directory: string, props: { params: Promise<
 
     return (
         <div className="article">
-            <section className="article-header">
+            <section className="page-header">
                 <h1>{articleContent.data.title}</h1>
                 <div className="description">{articleContent.data.description}</div>
             </section>
