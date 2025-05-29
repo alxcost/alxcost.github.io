@@ -96,8 +96,6 @@ audio {
 	width: 64px;
 }
 
-
-
 .references a:first-child {
 	text-decoration: none;
 }
@@ -133,6 +131,30 @@ audio {
 	}
 }
 
+.page-header {
+	padding: 20px 70px;
+	padding-top: 60px;
+	background-color: #edeeef;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+
+	.title {
+		padding-bottom: 20px;
+		font-size: 26px;
+	}
+
+	.description {
+		font-size: 15px;
+		color: #777;
+		padding-bottom: 40px;
+	}
+
+	.text {
+		color: #777;
+		padding-bottom: 40px;
+	}
+}
 
 /* #### Content ############################################################# */
 .no-bullet {

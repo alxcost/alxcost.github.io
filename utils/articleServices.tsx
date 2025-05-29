@@ -1,6 +1,8 @@
 
 import fs from 'fs';
 import matter from 'gray-matter';
+import Markdown from 'markdown-to-jsx';
+import PhotoswipeGallery from './photoswipe';
 
 export type ArticleSlug = {
     slug: string;
@@ -32,4 +34,30 @@ export function getArticleContent(articleDir: string, slug: string) {
 
     const matterResult = matter(content);
     return matterResult;
+}
+
+
+export async function outputArticle(directory: string, props: { params: Promise<ArticleSlug> }) {
+    const params = await props.params;
+
+    const articleContent = getArticleContent(directory, params.slug)
+
+    return (
+        <div className="article">
+            <section className="article-header">
+                <h1>{articleContent.data.title}</h1>
+                <div className="description">{articleContent.data.description}</div>
+            </section>
+            <div className="article-body">
+                <Markdown
+                    options={{
+                        overrides: {
+                            gallery: {
+                                component: PhotoswipeGallery
+                            }
+                        }
+                    }}>{articleContent.content}</Markdown>
+            </div>
+        </div>
+    );
 }
