@@ -2,7 +2,7 @@ import { ArticleSlug, getAvailableArticles, outputArticle } from '@/utils/articl
 
 export const dynamicParams = false;
 
-const articlesDir = 'pages/electronics';
+const articlesDir = 'pages/software';
 
 export async function generateStaticParams(): Promise<ArticleSlug[]> {
     const posts = getAvailableArticles(articlesDir);

@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Software() {
     return (
-        <div className="content-container">
-            <section className="description">
+        <div className="content-container article articles-description">
+            <section className="page-header">
                 <div className="text">
-                    Software and tools I&apos;ve released to the public. Open-source projects are available on my <Link href="https://github.com/alxcost" target="_blank"><img className="file-type-2x" src="ui/images/icons/GitHub_Logo.png" /></Link>.
+                    Software and tools I&apos;ve released to the public. Open-source projects are available on my <Link href="https://github.com/alxcost" target="_blank"><img className="file-type-2x" src="images/icons/GitHub_Logo.png" /></Link>.
                 </div>
             </section>
 
-            <section className="articles">
+            <section className="article-body">
                 <h2>Articles</h2>
                 <ul className="post-list">
                     <li><Link href="software/sensorthings">The OGC SensorThings Standard</Link> - 2017-06</li>
@@ -18,7 +18,6 @@ export default function Software() {
 
                 <h2>Tools</h2>
                 <ul className="post-list">
-                    <li><Link href="https://github.com/alxcost/tmbox-downloader" target="_blank">tmbox.net Downloader</Link>,  Simple tmbox downloader/web-crawler to bulk download a user&apos;s songs from tmbox.net </li>
                     <li><Link href="https://github.com/alxcost/SerialPortReader" target="_blank">Serial Port Reader</Link>, Basic Serial COM port reader</li>
                 </ul>
 

@@ -10,7 +10,7 @@ export default function Homepage() {
     return (
         <React.Fragment>
             <div className="content-container">
-                <section className="description">
+                <section className="page-header">
                     <div className="title">
                         Welcome to Alex&apos;s Research Lab
                     </div>
