@@ -5,7 +5,7 @@ export default function Software() {
         <div className="content-container article articles-description">
             <section className="page-header">
                 <div className="text">
-                    Software and tools I&apos;ve released to the public. Open-source projects are available on my <Link href="https://github.com/alxcost" target="_blank"><img className="file-type-2x" src="images/icons/GitHub_Logo.png" /></Link>.
+                    Software and tools I&apos;ve released or dealt with. Open-source projects are available on my <Link href="https://github.com/alxcost" target="_blank"><img className="file-type-2x" src="images/icons/GitHub_Logo.png" /></Link>.
                 </div>
             </section>
 
