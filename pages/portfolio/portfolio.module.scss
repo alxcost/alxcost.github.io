@@ -1,0 +1,93 @@
+$teal-soft: #4e8175;
+$teal-rail: #8aa79f;
+$teal-dark: #3d645a;
+$teal-hover: #5ca08f;
+
+$dot-size: 12px;
+$row-gap: 1.5rem;
+
+.btnPrimary {
+    background-color: $teal-hover !important;
+    color: #fff;
+}
+
+.timelineGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    column-gap: 1rem;
+    row-gap: $row-gap;
+    padding: 1rem 0;
+}
+
+.rail {
+    position: absolute;
+    top: $dot-size;
+    bottom: $dot-size;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    background: $teal-rail;
+    border-radius: 2px;
+    z-index: 0;
+}
+
+.row {
+    display: contents;
+}
+
+.leftCell {
+    grid-column: 1 / 2;
+}
+
+.centerCell {
+    grid-column: 2 / 3;
+    display: grid;
+    place-items: center;
+}
+
+.rightCell {
+    grid-column: 3 / 4;
+}
+
+.cardOuter {
+    position: relative;
+    z-index: 1;
+    transition: 150ms all ease 0s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.dot {
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    background: $teal-soft;
+    border: 2px solid $teal-dark;
+    box-shadow: 0 0 0 4px rgba($teal-soft, .15);
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.imageWrap {
+    position: relative;
+    min-height: 180px;
+}
+
+@media (max-width: 767.98px) {
+    .timelineGrid {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .leftCell,
+    .rightCell {
+        grid-column: 2 / 3;
+    }
+
+    .centerCell {
+        grid-column: 1 / 2;
+    }
+}

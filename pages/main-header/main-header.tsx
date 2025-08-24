@@ -82,10 +82,6 @@ export default function MainHeader() {
                         </li>
                     </ul>
                 </div>
-                <div className="notice">
-                    I just finished reviving my website from an old archive. This is a version from 2017 which still doesn&apos;t have its original contents.<br />
-                    I&apos;m currently building it back up to its full glory.
-                </div>
             </header>
         </React.Fragment>
     );
